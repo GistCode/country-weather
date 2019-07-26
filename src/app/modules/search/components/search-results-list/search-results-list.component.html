@@ -1,0 +1,20 @@
+<mat-grid-list [cols]="gridCols" rowHeight="200px" gutterSize="1em">
+  <mat-grid-tile *ngFor="let result of searchResults">
+    <mat-card class="country-weather-card">
+      <mat-card-header>
+        <img class="country-flag" mat-card-avatar src="{{ result.flag }}" />
+        <mat-card-title>{{ result.name }}</mat-card-title>
+        <mat-card-subtitle>{{ result.capital }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="country-weather-condition">
+          <img src="{{ result.weather.current.condition.icon }}" />
+          <span>
+            {{ result.weather.current.condition.text }} <br />
+            {{ result.weather.location.localtime }}
+          </span>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

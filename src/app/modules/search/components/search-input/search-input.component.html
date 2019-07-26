@@ -1,0 +1,24 @@
+<span class="search-field">
+  <form #searchForm="ngForm">
+    <input
+      class="search-input"
+      placeholder="Country"
+      autofocus
+      [(ngModel)]="searchCountryQuery"
+      name="searchCountryQuery"
+      minlength="3"
+      required
+    />
+    <button
+      type="submit"
+      mat-mini-fab
+      matSuffix
+      aria-label="Search"
+      color="accent"
+      [disabled]="!searchForm.form.valid"
+      [routerLink]="['/search', searchCountryQuery]"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+  </form>
+</span>

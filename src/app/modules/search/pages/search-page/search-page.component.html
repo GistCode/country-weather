@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="title" routerLink="/">Weather Country</span>
+    <span class="spacer" fxHide.lt-sm="true">
+      <app-search-input [query]="query"> </app-search-input>
+    </span>
+  </mat-toolbar-row>
+  <mat-toolbar-row fxHide.gt-xs="true">
+    <span class="spacer">
+      <app-search-input [query]="query"> </app-search-input>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate">
+</mat-progress-bar>
+
+<div class="container" *ngIf="searchResults">
+  <app-search-results-list [searchResults]="searchResults">
+  </app-search-results-list>
+</div>

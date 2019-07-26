@@ -1,0 +1,12 @@
+mat-card.mat-card.country-weather-card {
+  width: 100%;
+
+  .country-flag.mat-card-avatar {
+    border-radius: 0;
+    object-fit: contain;
+  }
+  .country-weather-condition {
+    display: flex;
+    align-items: center;
+  }
+}
