@@ -46,7 +46,6 @@ export class SearchPageComponent implements OnDestroy {
   }
 
   resolvedDataHandler(resolvedData: CountryWeather[] | any): void {
-    console.log(resolvedData);
     if (Array.isArray(resolvedData)) {
       this.searchResults = resolvedData;
     } else if (typeof resolvedData !== 'undefined') {
