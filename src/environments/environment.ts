@@ -8,7 +8,7 @@ export const environment = {
   production: false,
   countryAPI: 'https://restcountries.eu/rest/v2/name/',
   countryFields: ['name', 'capital', 'flag'],
-  weatherAPI: 'http://api.apixu.com/v1/current.json'
+  weatherAPI: 'https://api.apixu.com/v1/current.json'
 };
 
 /*
