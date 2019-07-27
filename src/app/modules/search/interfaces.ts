@@ -1,4 +1,3 @@
-
 export interface Country {
   capital: string;
   name: string;
@@ -7,6 +6,22 @@ export interface Country {
 
 export interface Weather {
   current: Current;
+  location: Location;
+}
+
+export interface CountryWeather extends Country {
+  weather: Weather;
+}
+
+interface Location {
+  country: string;
+  lat: number;
+  localtime: string;
+  localtime_epoch: number;
+  lon: number;
+  name: string;
+  region: string;
+  tz_id: string;
 }
 
 interface Current {
@@ -36,8 +51,4 @@ interface Current {
   wind_dir: string;
   wind_kph: number;
   wind_mph: number;
-}
-
-export interface CountryWeather extends Country {
-  weather: any;
 }

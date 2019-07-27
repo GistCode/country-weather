@@ -22,7 +22,6 @@ export class SearchPageComponent implements OnDestroy {
   searchResults: CountryWeather[];
   query: string;
   loading = false;
-  hasError = false;
   paramMap$: Subscription;
 
   constructor(
